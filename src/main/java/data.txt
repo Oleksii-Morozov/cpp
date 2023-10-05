@@ -1,0 +1,20 @@
+Manchester United,1878,Manchester
+Liverpool,1892,Liverpool
+Chelsea,1905,London
+Arsenal,1886,London,
+Manchester City,1880,Manchester
+Barcelona,1899,Barcelona
+Real Madrid,1902,Madrid
+Bayern Munich,1900,Munich,
+Borussia Dortmund,1909,Dortmund
+AC Milan,1899,Milan
+Inter Milan,1908,Milan
+Juventus,1897,Turin
+Paris Saint-Germain,1970,Paris
+Ajax,1900,Amsterdam
+Tottenham Hotspur,1882,London
+Atletico Madrid,1903,Madrid
+AS Roma,1927,Rome
+Napoli,1926,Naples
+Sevilla,1890,Seville
+Benfica,1904,Lisbon
