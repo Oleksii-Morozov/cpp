@@ -52,6 +52,19 @@ public class FootballClubController {
     public static List<FootballClub> mergeTwoLists(List<FootballClub> clubs1, List<FootballClub> clubs2) {
         Set<FootballClub> commonClubs = new HashSet<>(clubs1);
         commonClubs.retainAll(clubs2);
-        return commonClubs.stream().toList();
+        List<FootballClub> commonClubsList = new ArrayList<>(commonClubs);
+        List<FootballClub> clearData = new ArrayList<>();
+        Random random = new Random();
+        List<Integer> usedNumbers = new ArrayList<>();
+
+        for(int i = 0; i < commonClubsList.size(); i++) {
+            int randomIndex = random.nextInt(commonClubsList.size());
+            while(usedNumbers.contains(randomIndex)) {
+                randomIndex = random.nextInt(commonClubsList.size());
+            }
+            usedNumbers.add(randomIndex);
+            clearData.add(commonClubsList.get(randomIndex));
+        }
+        return clearData;
     }
 }

@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class MenuUtil {
-    private FootballClubController controller = new FootballClubController();
+    private final FootballClubController controller = new FootballClubController();
     private List<FootballClub> footballClubList = null;
 
     public void displayMenu() {
@@ -20,10 +20,10 @@ public class MenuUtil {
 
         if (fileChoice == 1) {
             // Use one input file
-            loadEmployeesFromSingleFile(scanner);
+            loadFootballClubsFromSingleFile(scanner);
         } else if (fileChoice == 2) {
             // Use two input files
-            loadEmployeesFromTwoFiles(scanner);
+            loadFootballClubsFromTwoFiles(scanner, false);
         } else if (fileChoice == 3) {
             // Exit the program
             System.out.println("Exiting the program.");
@@ -64,7 +64,7 @@ public class MenuUtil {
                     break;
                 case 4 :
                     // Find common clubs from two files
-                    loadEmployeesFromTwoFiles(scanner);
+                    loadFootballClubsFromTwoFiles(scanner, true);
                     break;
                 case 5 :
                     // Exit the program
@@ -92,7 +92,7 @@ public class MenuUtil {
         }
     }
 
-    private void loadEmployeesFromSingleFile(Scanner scanner) {
+    private void loadFootballClubsFromSingleFile(Scanner scanner) {
         System.out.print("Enter the file path for the input file: ");
         String filePath = scanner.nextLine();
         try {
@@ -102,7 +102,7 @@ public class MenuUtil {
         }
     }
 
-    private void loadEmployeesFromTwoFiles(Scanner scanner) {
+    private void loadFootballClubsFromTwoFiles(Scanner scanner, boolean isTask) {
         System.out.print("Enter the file path for the first input file: ");
         String filePath1 = scanner.nextLine();
         System.out.print("Enter the file path for the second input file: ");
@@ -110,7 +110,12 @@ public class MenuUtil {
         try {
             footballClubList = FileReaderUtil.readFootballClubsFromFile(filePath1);
             var tempFootballClubs = FileReaderUtil.readFootballClubsFromFile(filePath2);
-            footballClubList.addAll(tempFootballClubs);
+            if(isTask){
+                footballClubList = FootballClubController.mergeTwoLists(footballClubList, tempFootballClubs);
+            }
+            else {
+                footballClubList.addAll(tempFootballClubs);
+            }
         } catch (IOException e){
             System.out.println(e.getMessage());
         }
