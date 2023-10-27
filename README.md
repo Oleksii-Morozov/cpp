@@ -1,7 +1,9 @@
 # Hi 👋
+
 ### This repository contains my lab work for the course "Cross-platform programming" which wrote on java
 
 Here is list of my labs (every on separate branch):
+
 1. [Lab 1](https://github.com/Oleksii-Morozov/cpp/tree/lab-1)
 2. [Lab 2](https://github.com/Oleksii-Morozov/cpp/tree/lab-2)
 3. [Lab 3](https://github.com/Oleksii-Morozov/cpp/tree/lab-3)
