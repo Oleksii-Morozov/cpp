@@ -9,7 +9,14 @@ import java.util.List;
 
 @SuppressWarnings({"CallToPrintStackTrace"})
 public class Serializer {
-    public static <G> void serializeCollection(List<G> collection, String path) {
+
+    public static <G> void serialize(List<G> collection, String path, boolean json) {
+        if(json)
+            serializeToJson(collection, path);
+        else
+            serializeToSer(collection, path);
+    }
+    private static <G> void serializeToSer(List<G> collection, String path) {
         try {
             FileOutputStream fileOutputStream = new FileOutputStream(path);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
@@ -22,7 +29,7 @@ public class Serializer {
         }
     }
 
-    public static <G> void serializeCollectionToJson(List<G> collection, String path) {
+    private static <G> void serializeToJson(List<G> collection, String path) {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             String json = objectMapper.writeValueAsString(collection);

@@ -1,7 +1,9 @@
 package alerix.dev;
 
+import alerix.dev.pizzeria.Application;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello Cross-platform programing!");
+        Application.run(true);
     }
 }

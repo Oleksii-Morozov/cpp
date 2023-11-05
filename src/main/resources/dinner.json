@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Family Feast",
+    "orderedPizzas": [
+      {
+        "name": "Margherita",
+        "weight": 500.0,
+        "price": 15.99,
+        "toppings": ["cheese", "tomato", "basil"],
+        "isVegan": false
+      },
+      {
+        "name": "Veggie Delight",
+        "weight": 450.0,
+        "price": 17.99,
+        "toppings": ["bell peppers", "olives", "onions", "mushrooms"],
+        "isVegan": true
+      }
+    ],
+    "address": "123 Maple Street",
+    "deliveryDateTime": "2023-11-05T19:30:00"
+  },
+  {
+    "name": "Date Night",
+    "orderedPizzas": [
+      {
+        "name": "Pepperoni Passion",
+        "weight": 550.0,
+        "price": 18.99,
+        "toppings": ["pepperoni", "extra cheese"],
+        "isVegan": false
+      }
+    ],
+    "address": "456 Pine Road",
+    "deliveryDateTime": "2023-11-06T18:45:00"
+  }
+]

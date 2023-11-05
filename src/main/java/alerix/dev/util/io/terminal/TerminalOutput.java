@@ -1,6 +1,7 @@
 package alerix.dev.util.io.terminal;
 
 import java.util.List;
+import java.util.Map;
 
 public class TerminalOutput {
     public static void print(String message) {
@@ -17,5 +18,8 @@ public class TerminalOutput {
         collection.forEach(System.out::println);
     }
 
-
+    public static <K, G> void print(Map<K, G> map, String message) {
+        System.out.println(message);
+        map.forEach((key, value) -> System.out.println(key + " - " + value));
+    }
 }

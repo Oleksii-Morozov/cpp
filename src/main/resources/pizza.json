@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Margherita",
+    "weight": 500.0,
+    "price": 15.99,
+    "toppings": ["cheese", "tomato", "basil"],
+    "isVegan": false
+  },
+  {
+    "name": "Veggie Delight",
+    "weight": 450.0,
+    "price": 17.99,
+    "toppings": ["bell peppers", "olives", "onions", "mushrooms"],
+    "isVegan": true
+  },
+  {
+    "name": "Pepperoni Passion",
+    "weight": 550.0,
+    "price": 18.99,
+    "toppings": ["pepperoni", "extra cheese"],
+    "isVegan": false
+  }
+]
