@@ -306,7 +306,7 @@ public class TaskManager {
         Task task = findTaskInProjectById(project, taskId);
 
         if (task != null) {
-            task.setIsDone(true);
+            task.setIsDone();
             System.out.println("Task marked as done successfully.");
         } else {
             System.out.println("Task not found.");

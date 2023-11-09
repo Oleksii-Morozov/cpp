@@ -10,7 +10,7 @@ import java.util.List;
 public class Reader {
     @SuppressWarnings("unchecked")
     public static List<Project> readProjectsFromFile(String filename) throws IOException, ClassNotFoundException {
-        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(filename))) {
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(filename + ".ser"))) {
             return (List<Project>) in.readObject();
         }
     }

@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Writer {
     public static void writeProjectsToFile(List<Project> projects, String filename) throws IOException {
-        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filename))) {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filename + ".ser"))) {
             out.writeObject(projects);
         }
     }
