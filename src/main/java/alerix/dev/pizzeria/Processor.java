@@ -58,23 +58,23 @@ public class Processor {
     }
 
     public Map<Pizza, List<Dinner>> getGroupByPizzaMap() {
-        return pizzeria.getDinnerList().stream().
+        return pizzeria.dinnerList().stream().
                 flatMap(dinner -> dinner.orderedPizzas().stream().
                         map(pizza -> Map.entry(pizza, dinner))).
                 collect(Collectors.groupingBy(Map.Entry::getKey, Collectors.mapping(Map.Entry::getValue, Collectors.toList())));
     }
 
     public Map<Dinner, Duration> getExpiresDinnersMap() {
-        return pizzeria.getDinnerList().stream().collect(Collectors.toMap(dinner -> dinner,
-                dinner -> Duration.between(LocalDateTime.now(), dinner.deliveryDateTime())));
+        return pizzeria.dinnerList().stream().collect(Collectors.toMap(dinner -> dinner,
+                dinner -> Duration.between(dinner.deliveryDateTime(), LocalDateTime.now())));
     }
 
     public List<Dinner> getDinnersWithVeganPizza() {
-        return pizzeria.getDinnerList().stream().filter(Dinner::isVegan).toList();
+        return pizzeria.dinnerList().stream().filter(Dinner::isVegan).toList();
     }
 
     public void serializeCollection() {
-        Serializer.serialize(pizzeria.getDinnerList(), "dinnerList.json", true);
-        Serializer.serialize(pizzeria.getMenu(), "menu.json", true);
+        Serializer.serialize(pizzeria.dinnerList(), "results/dinners.json", true);
+        Serializer.serialize(pizzeria.menu(), "results/pizza.json", true);
     }
 }

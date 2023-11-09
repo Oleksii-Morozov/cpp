@@ -2,9 +2,7 @@ package alerix.dev.util.io.file;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.util.List;
 
 @SuppressWarnings({"CallToPrintStackTrace"})
@@ -31,13 +29,12 @@ public class Serializer {
 
     private static <G> void serializeToJson(List<G> collection, String path) {
         ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.registerModule(new com.fasterxml.jackson.datatype.jsr310.JavaTimeModule());
         try {
             String json = objectMapper.writeValueAsString(collection);
-            FileOutputStream fileOutputStream = new FileOutputStream(path);
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-            objectOutputStream.writeObject(json);
-            objectOutputStream.close();
-            fileOutputStream.close();
+            try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path)))) {
+                writer.write(json);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

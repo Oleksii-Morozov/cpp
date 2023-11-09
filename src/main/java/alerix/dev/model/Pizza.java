@@ -27,9 +27,26 @@ public record Pizza(
 
     @Override
     public String toString() {
-        String toppingsString = String.join(", ", toppings);
+
+        StringBuilder toppingsString = new StringBuilder();
+        int itemsPerLine = 2;
+        for (int i = 0; i < toppings.size(); i++) {
+            toppingsString.append(toppings.get(i));
+
+            // Add a comma if it's not the last item
+            if (i < toppings.size() - 1) {
+                toppingsString.append(", ");
+            }
+
+            // Break the line after every two items, but not at the end
+            if ((i + 1) % itemsPerLine == 0 && i < toppings.size() - 1) {
+                toppingsString.append("\n\t");
+            }
+        }
+
         String veganString = isVegan ? "vegan" : "not vegan";
-        return String.format("%s (%.2fg, $%.2f, %-40s, %s)", name, weight, price, toppingsString, veganString);
+        String formattedName = String.format("%" + (20 + name.length() / 2) + "s", name);
+        return String.format("%s\n\t%s\n\t%.0fg - $%.2f\n\t%s", formattedName, toppingsString,  weight, price, veganString);
     }
 
     @Override

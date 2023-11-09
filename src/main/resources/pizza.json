@@ -1,23 +1,100 @@
 [
   {
-    "name": "Margherita",
-    "weight": 500.0,
-    "price": 15.99,
-    "toppings": ["cheese", "tomato", "basil"],
+    "name": "Pepperoni",
+    "weight": 450.0,
+    "price": 9.99,
+    "toppings": ["Tomato", "Pepperoni", "Mozzarella"],
     "isVegan": false
   },
   {
-    "name": "Veggie Delight",
-    "weight": 450.0,
+    "name": "Hawaiian",
+    "weight": 500.0,
+    "price": 12.99,
+    "toppings": ["Neapolitan Sauce", "Roasted Chicken", "Pineapples", "Mozzarella"],
+    "isVegan": false
+  },
+  {
+    "name": "Vegetarian",
+    "weight": 500.0,
     "price": 17.99,
-    "toppings": ["bell peppers", "olives", "onions", "mushrooms"],
+    "toppings": ["Tomato", "Tomatoes", "Bell Peppers", "Mushrooms", "Olives", "Parmesan"],
     "isVegan": true
   },
   {
-    "name": "Pepperoni Passion",
+    "name": "Verona",
+    "weight": 500.0,
+    "price": 15.99,
+    "toppings": ["Cream", "Ham", "Arugula", "Mushrooms", "Parmesan"],
+    "isVegan": false
+  },
+  {
+    "name": "Prosciutto",
+    "weight": 500.0,
+    "price": 18.50,
+    "toppings": ["Neapolitan Sauce", "Ham", "Bacon", "Mushrooms", "Artichokes", "Mozzarella"],
+    "isVegan": false
+  },
+  {
+    "name": "Capricciosa",
+    "weight": 500.0,
+    "price": 16.99,
+    "toppings": ["Neapolitan Sauce", "Ham", "Mushrooms", "Olives", "Mozzarella"],
+    "isVegan": false
+  },
+  {
+    "name": "Tuna",
+    "weight": 500.0,
+    "price": 15.50,
+    "toppings": ["Neapolitan Sauce", "Tuna", "Marinated Onions", "Capers", "Mozzarella"],
+    "isVegan": false
+  },
+  {
+    "name": "Quattro Formaggi",
+    "weight": 500.0,
+    "price": 15.99,
+    "toppings": ["Cream", "Mozzarella", "Cream Cheese", "Parmesan", "Gorgonzola"],
+    "isVegan": false
+  },
+  {
+    "name": "Meat",
+    "weight": 500.0,
+    "price": 19.99,
+    "toppings": ["Neapolitan Sauce", "Ham", "Salami", "Chicken Breast", "Bacon", "Mozzarella"],
+    "isVegan": false
+  },
+  {
+    "name": "Spanish",
+    "weight": 500.0,
+    "price": 17.99,
+    "toppings": ["Tomato", "Chorizo", "Bacon", "Sausages", "Corn", "Mozzarella"],
+    "isVegan": false
+  },
+  {
+    "name": "Diavola",
+    "weight": 500.0,
+    "price": 16.99,
+    "toppings": ["Spicy", "Chorizo", "Salami Milano", "Marinated Onions", "Chili Pepper", "Mozzarella"],
+    "isVegan": false
+  },
+  {
+    "name": "3 Cheeses with Pear",
+    "weight": 500.0,
+    "price": 19.99,
+    "toppings": ["Cream", "Pear", "Honey", "Walnuts", "Mozzarella"],
+    "isVegan": false
+  },
+  {
+    "name": "Mafia of Cesareni",
     "weight": 550.0,
     "price": 18.99,
-    "toppings": ["pepperoni", "extra cheese"],
+    "toppings": ["Neapolitan Sauce", "Chicken Breast", "Bacon", "Mixed Greens", "Cherry Tomatoes", "Mozzarella", "Parmesan"],
+    "isVegan": false
+  },
+  {
+    "name": "Con Birra",
+    "weight": 600.0,
+    "price": 20.99,
+    "toppings": ["Cream", "Hunter's Sausages", "Chicken Breast", "Chili Pepper", "Mozzarella", "Gorgonzola", "Chorizo"],
     "isVegan": false
   }
 ]

@@ -1,7 +1,7 @@
 package alerix.dev.util.io.file;
 
 import alerix.dev.util.io.terminal.TerminalOutput;
-import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.*;
@@ -24,6 +24,7 @@ public class Deserializer {
 
     private static <G> List<G> deserializeFromText(String path, Class<G> type) {
         List<G> collection = null;
+        path = "src/main/resources/" + path;
         try {
             FileInputStream fileInputStream = new FileInputStream(path);
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
@@ -41,18 +42,21 @@ public class Deserializer {
         if (!path.endsWith(".json")) {
             throw new IllegalArgumentException("Path must end with .json");
         }
-        if (!new File(path).exists()) {
-            throw new IllegalArgumentException("File does not exist");
+
+        InputStream inputStream = Deserializer.class.getClassLoader().getResourceAsStream(path);
+        if (inputStream == null) {
+            throw new FileNotFoundException("Resource not found: " + path);
         }
+
         ObjectMapper objectMapper = new ObjectMapper();
-        InputStream inputStream = null;
-        try {
-            TerminalOutput.print("Deserialized data from " + path);
-            inputStream = Deserializer.class.getClassLoader().getResourceAsStream(path);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return objectMapper.readValue(inputStream, new TypeReference<>() {
-        });
+        objectMapper.registerModule(new com.fasterxml.jackson.datatype.jsr310.JavaTimeModule());
+
+        JavaType javaType = objectMapper.getTypeFactory().constructCollectionType(List.class, type);
+
+        List<G> collection = objectMapper.readValue(inputStream, javaType);
+
+        inputStream.close();
+
+        return collection;
     }
 }

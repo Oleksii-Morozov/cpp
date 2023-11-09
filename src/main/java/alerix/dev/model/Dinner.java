@@ -37,7 +37,7 @@ public record Dinner(
     @Override
     public String toString() {
         String orderString = orderedPizzas.stream().map(Pizza::name).reduce((a, b) -> a + ", " + b).orElse("");
-        return String.format("%-10s | %-40s | $%-5f | %-20s | %s", name, orderString, getTotalPrice(), address,
+        return String.format("%-30s | %-50s | $%.2f | %-20s | %s", name, orderString, getTotalPrice(), address,
                 deliveryDateTime.format(DateTimeFormatter.ofPattern("HH:mm dd.MM.yyyy"))
         );
     }

@@ -15,7 +15,7 @@ public class Menu {
         TerminalOutput.print("6. View Dinners Grouped by Pizza");
         TerminalOutput.print("7. View Expired Dinners");
         TerminalOutput.print("8. View Dinners with Pizza");
-        TerminalOutput.print("9. View Dinners with Spicy Pizza");
+        TerminalOutput.print("9. View Dinners with Vegan Pizza");
         TerminalOutput.print("11. Serialize pizzas collection");
         TerminalOutput.print("0. Exit");
         TerminalOutput.print("Enter your choice: ");
