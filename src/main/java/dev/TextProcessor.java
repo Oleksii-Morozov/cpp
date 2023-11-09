@@ -1,5 +1,6 @@
 package dev;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.regex.Matcher;
@@ -13,7 +14,6 @@ public class TextProcessor {
             throw new IllegalArgumentException("Text cannot be null or empty and length cannot be less than 0");
         }
 
-
         Set<String> uniqueWords = getUniqueWordsOfGivenLength(text, length);
         StringBuilder result = new StringBuilder();
         for(String word : uniqueWords) {
@@ -25,12 +25,13 @@ public class TextProcessor {
     private Set<String> getUniqueWordsOfGivenLength(String text, int length)  throws IllegalArgumentException {
         Set<String> uniqueWords = new HashSet<>();
 
-        Pattern pattern = Pattern.compile("(?<=[.!?]\\s|\\A)[A-Z][^.!?]*\\?");
+        Pattern pattern = Pattern.compile("\\b(\\w+)\\b(?=\\s+\\w+[.?!])");
         Matcher matcher = pattern.matcher(text);
 
         while (matcher.find()) {
             String sentence = matcher.group();
             String[] words = sentence.split("\\W+");
+            System.out.print(Arrays.toString(words));
             for (String word : words) {
                 if (word.length() == length) {
                     uniqueWords.add(word);
