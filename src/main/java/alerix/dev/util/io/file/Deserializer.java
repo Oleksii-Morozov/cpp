@@ -1,6 +1,5 @@
 package alerix.dev.util.io.file;
 
-import alerix.dev.util.io.terminal.TerminalOutput;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -19,10 +18,10 @@ public class Deserializer {
             }
         }
         else
-            return deserializeFromText(path, type);
+            return deserializeFromText(path);
     }
 
-    private static <G> List<G> deserializeFromText(String path, Class<G> type) {
+    private static <G> List<G> deserializeFromText(String path) {
         List<G> collection = null;
         path = "src/main/resources/" + path;
         try {
@@ -31,7 +30,6 @@ public class Deserializer {
             collection = (List<G>) objectInputStream.readObject();
             objectInputStream.close();
             fileInputStream.close();
-            TerminalOutput.print("Deserialized data from " + path);
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }

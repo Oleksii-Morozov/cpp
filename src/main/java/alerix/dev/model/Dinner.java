@@ -26,10 +26,6 @@ public record Dinner(
         return orderedPizzas.stream().mapToDouble(Pizza::price).sum();
     }
 
-    public double getTotalWeight() {
-        return orderedPizzas.stream().mapToDouble(Pizza::weight).sum();
-    }
-
     public boolean isVegan() {
         return orderedPizzas.stream().anyMatch(Pizza::isVegan);
     }

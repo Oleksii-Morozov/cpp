@@ -21,13 +21,13 @@ public class Serializer {
             objectOutputStream.writeObject(collection);
             objectOutputStream.close();
             fileOutputStream.close();
-            System.out.println("Serialized data is saved in " + path);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     private static <G> void serializeToJson(List<G> collection, String path) {
+        path += ".json";
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new com.fasterxml.jackson.datatype.jsr310.JavaTimeModule());
         try {

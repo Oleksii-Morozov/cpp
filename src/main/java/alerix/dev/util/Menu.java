@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Menu {
     public static int showMenu(Scanner scanner) {
-        TerminalOutput.print("Pizzeria Menu:");
+        TerminalOutput.print("Pizzeria App Menu:");
         TerminalOutput.print("1. View Dinners and Menu");
         TerminalOutput.print("2. View Dinners Sorted by Delivery Time");
         TerminalOutput.print("3. View Dinners Sorted by Price");

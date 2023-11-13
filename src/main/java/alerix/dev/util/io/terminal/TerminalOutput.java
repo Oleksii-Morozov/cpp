@@ -22,12 +22,6 @@ public class TerminalOutput {
         collection.forEach(System.out::println);
     }
 
-    // Universal method for printing any Map
-//    public static <K, G> void print(Map<K, G> map, String message) {
-//        System.out.println(message);
-//        map.forEach((key, value) -> System.out.println(key + "\n" + value));
-//    }
-
     // Special method for printing Map<Dinner, Duration>
     public static void printDinnerDurationMap(Map<Dinner, Duration> map, String message) {
         System.out.println(message);

@@ -74,7 +74,7 @@ public class Processor {
     }
 
     public void serializeCollection() {
-        Serializer.serialize(pizzeria.dinnerList(), "results/dinners.json", true);
-        Serializer.serialize(pizzeria.menu(), "results/pizza.json", true);
+        Serializer.serialize(pizzeria.dinnerList(), "results/dinners.ser", true);
+        Serializer.serialize(pizzeria.menu(), "results/pizza.ser", true);
     }
 }
