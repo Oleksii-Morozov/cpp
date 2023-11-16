@@ -16,16 +16,25 @@ import java.util.stream.Collectors;
 public class Processor {
     private final Pizzeria pizzeria;
 
-    public Processor(String dinnerPath, String menuPath, boolean isJson) {
-        if(isJson) {
-            dinnerPath += ".json";
-            menuPath += ".json";
-        } else {
-            dinnerPath += ".ser";
-            menuPath += ".ser";
+    public Processor(String dinnerPath, String menuPath, int type) {
+        switch (type) {
+            case 1 -> {
+                dinnerPath += ".ser";
+                menuPath += ".ser";
+            }
+            case 2 -> {
+                dinnerPath += ".json";
+                menuPath += ".json";
+            }
+            case 3 -> {
+                dinnerPath += ".yaml";
+                menuPath += ".yaml";
+            }
+            default -> throw new IllegalArgumentException("Invalid type");
         }
-        pizzeria = new Pizzeria(Deserializer.deserialize(dinnerPath, Dinner.class, isJson),
-                Deserializer.deserialize(menuPath, Pizza.class, isJson));
+
+        pizzeria = new Pizzeria(Deserializer.deserialize(dinnerPath, Dinner.class, type),
+                Deserializer.deserialize(menuPath, Pizza.class, type));
     }
 
     public List<Dinner> getDinnerList() {
@@ -49,12 +58,17 @@ public class Processor {
                 (dinner -> dinner.orderedPizzas().stream().anyMatch(pizza -> pizza.name().equals(pizzaName))).toList();
     }
 
+    public Pizza getLighterPizzaByDinner(String dinnerName) {
+        return pizzeria.dinnerList().stream().filter(dinner -> dinner.name().equals(dinnerName)).
+                flatMap(dinner -> dinner.orderedPizzas().stream()).min(Comparator.comparing(Pizza::weight)).orElse(null);
+    }
+
     public List<Dinner> getDinnersTharHavingMorePizzaThen(int pizzaCount) {
         return pizzeria.dinnerList().stream().filter(dinner -> dinner.orderedPizzas().size() > pizzaCount).toList();
     }
 
     public Dinner getDinnerWithBiggestOrder() {
-        return pizzeria.dinnerList().stream().max(Comparator.comparing(Dinner::getTotalPrice)).get();
+        return pizzeria.dinnerList().stream().max(Comparator.comparing(Dinner::getTotalPrice)).orElse(null);
     }
 
     public Map<Pizza, List<Dinner>> getGroupByPizzaMap() {
@@ -73,8 +87,8 @@ public class Processor {
         return pizzeria.dinnerList().stream().filter(Dinner::isVegan).toList();
     }
 
-    public void serializeCollection() {
-        Serializer.serialize(pizzeria.dinnerList(), "results/dinners.ser", true);
-        Serializer.serialize(pizzeria.menu(), "results/pizza.ser", true);
+    public void serializeCollection(int type) {
+        Serializer.serialize(pizzeria.dinnerList(), "results/dinners.ser", type);
+        Serializer.serialize(pizzeria.menu(), "results/pizza.ser", type);
     }
 }

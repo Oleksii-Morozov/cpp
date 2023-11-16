@@ -10,10 +10,23 @@ public class Application {
     private static final String DINNER_PATH = "dinners";
     private static final String MENU_PATH = "pizza";
 
-    public static void run(Boolean isJson) {
-        Processor processor = new Processor(DINNER_PATH, MENU_PATH, isJson);
+    public static void run() {
+        TerminalOutput.print("Welcome to the Pizzeria App!");
+        TerminalOutput.print("Load from Ser/Json/Yaml? (1|2|3): ");
+        Scanner scanner = new Scanner(System.in);
+        Processor processor;
         while (true) {
-            Scanner scanner = new Scanner(System.in);
+            int type = scanner.nextInt();
+            if (type < 1 || type > 3) {
+                System.out.println("Invalid type. Try again: ");
+                continue;
+            }
+            scanner.nextLine();
+            processor = new Processor(DINNER_PATH, MENU_PATH, type);
+            break;
+        }
+        while (true) {
+
             int choise = showMenu(scanner);
             switch (choise) {
                 case 1 -> {
@@ -44,8 +57,29 @@ public class Application {
                     }
                     TerminalOutput.print(processor.getDinnersByPizzaName(pizzaName), pizzaName);
                 }
-                case 9 -> TerminalOutput.print(processor.getDinnersWithVeganPizza(), "Dinners with vegan pizza: ");
-                case 11 -> processor.serializeCollection();
+                case 9 -> {
+                    System.out.print("Enter dinner name: ");
+                    String dinnerName = scanner.nextLine();
+                    if (processor.getLighterPizzaByDinner(dinnerName) == null) {
+                        System.out.println("There is no dinner with such name");
+                        break;
+                    }
+                    TerminalOutput.print(processor.getLighterPizzaByDinner(dinnerName), dinnerName);
+                }
+                case 11 -> TerminalOutput.print(processor.getDinnersWithVeganPizza(), "Dinners with vegan pizza: ");
+                case 12 -> {
+                    TerminalOutput.print("Serializing pizzas collection: ");
+                    TerminalOutput.print("Serialize to from Ser/Json/Yaml? (1|2|3): ");
+                    while (true) {
+                        int type = scanner.nextInt();
+                        if (type < 1 || type > 3) {
+                            System.out.println("Invalid type. Try again: ");
+                            continue;
+                        }
+                        processor.serializeCollection(type);
+                        break;
+                    }
+                }
                 case 0 -> {
                     System.out.println("Exiting the Pizzeria Menu. Goodbye!");
                     System.exit(0);

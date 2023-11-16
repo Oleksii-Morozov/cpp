@@ -30,13 +30,18 @@ public record Dinner(
         return orderedPizzas.stream().anyMatch(Pizza::isVegan);
     }
 
+    public double getTotalWeight() {
+        return orderedPizzas.stream().mapToDouble(Pizza::weight).sum();
+    }
+
     @Override
     public String toString() {
         String orderString = orderedPizzas.stream().map(Pizza::name).reduce((a, b) -> a + ", " + b).orElse("");
-        return String.format("%-30s | %-50s | $%.2f | %-20s | %s", name, orderString, getTotalPrice(), address,
+        return String.format("%-30s | %-60s | $%.2f | %.2fg | %-20s | %s", name, orderString, getTotalPrice(), getTotalWeight(), address,
                 deliveryDateTime.format(DateTimeFormatter.ofPattern("HH:mm dd.MM.yyyy"))
         );
     }
+
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Dinner dinner) {

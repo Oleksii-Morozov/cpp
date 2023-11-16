@@ -17,6 +17,11 @@ public class TerminalOutput {
         System.out.println(object);
     }
 
+    public static void print(Pizza object, String message) {
+        System.out.println(message);
+        System.out.println(object);
+    }
+
     public static <G> void print(List<G> collection, String message) {
         System.out.println(message);
         collection.forEach(System.out::println);
