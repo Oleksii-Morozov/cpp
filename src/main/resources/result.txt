@@ -1,0 +1,130 @@
+Package[id=3, length=715, width=396, height=90, planks=[
+	Plank[id=42, length=715, width=50, height=18], 
+	Plank[id=24, length=715, width=72, height=18], 
+	Plank[id=29, length=715, width=72, height=18], 
+	Plank[id=48, length=715, width=72, height=18], 
+	Plank[id=49, length=356, width=72, height=18]]
+	]
+Package[id=3, length=715, width=396, height=90, planks=[
+	Plank[id=28, length=715, width=90, height=18], 
+	Plank[id=50, length=356, width=90, height=18], 
+	Plank[id=2, length=715, width=196, height=18], 
+	Plank[id=25, length=715, width=235, height=18], 
+	Plank[id=51, length=715, width=235, height=18]]
+	]
+Package[id=3, length=715, width=396, height=90, planks=[
+	Plank[id=8, length=715, width=296, height=18], 
+	Plank[id=12, length=715, width=296, height=18], 
+	Plank[id=12, length=715, width=296, height=18], 
+	Plank[id=13, length=715, width=296, height=18], 
+	Plank[id=13, length=715, width=296, height=18]]
+	]
+Package[id=3, length=715, width=396, height=90, planks=[
+	Plank[id=27, length=715, width=296, height=18], 
+	Plank[id=30, length=715, width=296, height=18], 
+	Plank[id=52, length=715, width=296, height=18], 
+	Plank[id=1, length=715, width=396, height=18], 
+	Plank[id=1, length=715, width=396, height=18]]
+	]
+Package[id=3, length=715, width=396, height=90, planks=[
+	Plank[id=36, length=176, width=396, height=18], 
+	Plank[id=37, length=266, width=396, height=18], 
+	Plank[id=37, length=266, width=396, height=18], 
+	Plank[id=40, length=715, width=396, height=18], 
+	Plank[id=40, length=715, width=396, height=18]]
+	]
+Package[id=4, length=895, width=396, height=90, planks=[
+	Plank[id=43, length=895, width=50, height=18], 
+	Plank[id=47, length=895, width=296, height=18], 
+	Plank[id=47, length=895, width=296, height=18], 
+	Plank[id=44, length=895, width=396, height=18], 
+	Plank[id=44, length=895, width=396, height=18]]
+	]
+Package[id=1, length=715, width=596, height=90, planks=[
+	Plank[id=8, length=715, width=296, height=18], 
+	Plank[id=27, length=715, width=296, height=18], 
+	Plank[id=23, length=715, width=396, height=18], 
+	Plank[id=41, length=715, width=396, height=18], 
+	Plank[id=10, length=715, width=446, height=18]]
+	]
+Package[id=3, length=715, width=396, height=90, planks=[
+	Plank[id=41, length=715, width=396, height=18], 
+	Plank[id=53, length=715, width=396, height=18], 
+	Plank[id=54, length=715, width=396, height=18], 
+	Plank[id=54, length=715, width=396, height=18], 
+	Plank[id=56, length=356, width=446, height=18]]
+	]
+Package[id=3, length=715, width=396, height=90, planks=[
+	Plank[id=57, length=356, width=496, height=18], 
+	Plank[id=3, length=356, width=596, height=18], 
+	Plank[id=3, length=356, width=596, height=18], 
+	Plank[id=6, length=176, width=596, height=18], 
+	Plank[id=7, length=266, width=596, height=18]]
+	]
+Package[id=3, length=715, width=396, height=90, planks=[
+	Plank[id=18, length=176, width=596, height=18], 
+	Plank[id=19, length=266, width=596, height=18], 
+	Plank[id=19, length=266, width=596, height=18], 
+	Plank[id=20, length=336, width=596, height=18], 
+	Plank[id=21, length=356, width=596, height=18]]
+	]
+Package[id=1, length=715, width=596, height=90, planks=[
+	Plank[id=55, length=715, width=446, height=18], 
+	Plank[id=5, length=715, width=468, height=18], 
+	Plank[id=4, length=715, width=478, height=18], 
+	Plank[id=7, length=266, width=596, height=18], 
+	Plank[id=11, length=685, width=596, height=18]]
+	]
+Package[id=3, length=715, width=396, height=90, planks=[
+	Plank[id=35, length=110, width=596, height=18], 
+	Plank[id=38, length=356, width=596, height=18], 
+	Plank[id=38, length=356, width=596, height=18], 
+	Plank[id=59, length=336, width=596, height=18], 
+	Plank[id=60, length=356, width=596, height=18]]
+	]
+Package[id=3, length=715, width=396, height=90, planks=[
+	Plank[id=61, length=176, width=596, height=18], 
+	Plank[id=62, length=266, width=596, height=18], 
+	Plank[id=62, length=266, width=596, height=18], 
+	Plank[id=63, length=356, width=596, height=18], 
+	Plank[id=63, length=356, width=596, height=18]]
+	]
+Package[id=4, length=895, width=396, height=90, planks=[
+	Plank[id=45, length=895, width=396, height=18], 
+	Plank[id=46, length=895, width=396, height=18], 
+	Plank[id=9, length=356, width=796, height=18], 
+	Plank[id=9, length=356, width=796, height=18], 
+	Plank[id=64, length=356, width=796, height=18]]
+	]
+Package[id=2, length=895, width=596, height=90, planks=[
+	Plank[id=45, length=895, width=396, height=18], 
+	Plank[id=22, length=715, width=446, height=18], 
+	Plank[id=31, length=820, width=580, height=18], 
+	Plank[id=26, length=715, width=596, height=18], 
+	Plank[id=32, length=878, width=596, height=18]]
+	]
+Package[id=6, length=1050, width=95, height=54, planks=[
+	Plank[id=65, length=95, width=900, height=18], 
+	Plank[id=15, length=90, width=1000, height=18], 
+	Plank[id=16, length=90, width=1000, height=18]]
+	]
+Package[id=7, length=2100, width=95, height=54, planks=[
+	Plank[id=33, length=90, width=2000, height=18], 
+	Plank[id=17, length=90, width=2050, height=18], 
+	Plank[id=67, length=95, width=2100, height=18]]
+	]
+Package[id=1, length=596, width=715, height=90, planks=[
+	Plank[id=39, length=685, width=596, height=18], 
+	Plank[id=58, length=715, width=596, height=18], 
+	Plank[id=60, length=356, width=596, height=18]]
+	]
+Package[id=5, length=596, width=1320, height=90, planks=[
+	Plank[id=64, length=356, width=796, height=18], 
+	Plank[id=66, length=95, width=1050, height=18]]
+	]
+
+Non-standard planks:
+
+	Plank[id=14, length=2600, width=90, height=18]
+	Plank[id=14, length=2600, width=90, height=18]
+	Plank[id=34, length=90, width=2600, height=18]

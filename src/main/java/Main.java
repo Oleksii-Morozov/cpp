@@ -1,5 +1,11 @@
+import java.io.IOException;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello Cross-platform programing!");
+        try {
+            new PackingManager().run();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
