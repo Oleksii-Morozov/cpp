@@ -1,5 +1,7 @@
+package dev.alerix;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello Cross-platform programing!");
+        System.out.println("Hello, world!");
     }
 }
