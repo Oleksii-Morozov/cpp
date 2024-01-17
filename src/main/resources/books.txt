@@ -1,0 +1,14 @@
+The Great Gatsby,F. Scott Fitzgerald,15.05.2023,1000
+To Kill a Mockingbird,Harper Lee,20.08.2022,800
+The Catcher in the Rye,J. D. Salinger,25.05.2021,600
+The Hobbit,J. R. R. Tolkien,30.06.2020,500
+The Lord of the Rings,J. R. R. Tolkien,05.07.2024,400
+Animal Farm,George Orwell,10.08.2023,300
+The Little Prince,Antoine de Saint-Exupéry,15.09.2022,200
+The Great Gatsby,F. Scott Fitzgerald,20.10.2021,100
+To Kill a Mockingbird,Harper Lee,25.11.2020,0
+The Catcher in the Rye,J. D. Salinger,30.12.2024,0
+The Hobbit,J. R. R. Tolkien,05.01.2024,0
+The Lord of the Rings,J. R. R. Tolkien,10.02.2023,0
+Animal Farm,George Orwell,15.03.2022,0
+The Little Prince,Antoine de Saint-Exupéry,20.04.2021,0
